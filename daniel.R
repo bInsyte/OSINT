@@ -10,5 +10,10 @@ colnames(data)[(which((colnames(data) == '')))] <- paste('Column_',(which((colna
 sort(unique(data$URL))[1]
 
 #Making get request to first url in list
-GET(url=sort(unique(data$URL))[1])
+request <- GET(url=sort(unique(data$URL))[1])
+
+#List status code
+request$status_code
+
+
 
